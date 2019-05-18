@@ -20,7 +20,10 @@
 <script type="text/javascript" src="js/jquery.prettyphoto.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
 <script src="https://cdn.ckeditor.com/4.7.3/standard-all/ckeditor.js"></script>
-
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="css/search.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+ 
 
 
 
