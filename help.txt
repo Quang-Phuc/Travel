@@ -1,0 +1,39 @@
+C:\Users\KyThuat88>git config --global user.email = "lamquangphuc1996@hmail.com"
+C:\Users\KyThuat88>git config --global user.name = "Quang-Phuc"
+
+$ git init // khoi tai repository
+
+git status // xem trang thai
+ git add . // add tat ca len git
+
+$ git commit -m "a" 
+
+$ git commit -a -a "commit to repository" // tât ca vua commit dang ca status
+
+$ git log // Noi dung thay doi
+ 
+
+git revert id // revert log cu
+
+
+
+// dang len GIt
+$ git remote add ProjectFPT(ten tren may) https://github.com/Quang-Phuc/ProjectFPT.git
+
+
+git push ProjectFPT(ten tren may ) 
+
+git push --set-upstream ProjectFPT(ten tren may )  master
+
+// Lay ve
+
+-tren web lay duong dan
+- tren may tinh : GitBash
+git clone duongdan
+
+// sua post len
+
+git add .
+git commit -m "comit test"
+git status
+git push 
