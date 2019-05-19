@@ -13,7 +13,7 @@ public class PageAction {
 		public static final String VIEWHOME = "viewHome";
 		public static final String VIEW_ADMIN = "adminHome";
 		public static final String VIEW_POST = "view-post";
-		
+		public static final String SAVE_HOME = "saveHome";		
 	}
 	
 	public interface TravelPage {

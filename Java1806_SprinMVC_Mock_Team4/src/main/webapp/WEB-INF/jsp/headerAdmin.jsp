@@ -153,7 +153,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="viewHome"><i class="fa fa-circle-o"></i>Tin trang chủ - Home</a></li>
+                <li><a href="saveHome"><i class="fa fa-circle-o"></i>Tin trang chủ - Home</a></li>
                 <li><a href="saveTravel"><i class="fa fa-circle-o"></i>Tin địa điểm</a></li>
 				 <li><a href="saveTravelContent"><i class="fa fa-circle-o"></i>Thông tin chi tiết địa điểm</a></li>
                 <li><a href="saveSale"><i class="fa fa-circle-o"></i>Tin khuyễn mãi</a></li>

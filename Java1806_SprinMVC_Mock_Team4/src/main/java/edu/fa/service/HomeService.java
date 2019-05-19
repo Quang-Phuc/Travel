@@ -14,5 +14,7 @@ public interface HomeService {
 	public void deleteHomeByHomeId(int travelId);
 	
 	public Home findHomeByHomeId(int HomeId);
+	
+	public Home findHomeByTravelIdTravelId(int travelId);
 
 }

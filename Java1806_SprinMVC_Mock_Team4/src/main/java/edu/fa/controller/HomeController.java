@@ -31,6 +31,13 @@ public class HomeController {
 		return "index";
 	}
 
+	@RequestMapping(value = "/saveHome", method = RequestMethod.GET)
+	public String saveHomeGET(Model model) {
+		model.addAttribute("listtravel", travelService.findAllTravel());
+		return  PageAction.HomePage.SAVE_HOME;
+
+	}
+	
 	@RequestMapping(value = "/saveHome", method = RequestMethod.POST)
 	public String saveHome(Home home, Model model) {
 		homeService.save(home);
@@ -59,9 +66,20 @@ public class HomeController {
 	public String updateHome(@RequestParam("homeId") int homeId, Model model) {
 
 		homeService.findHomeByHomeId(homeId);
-		
+		model.addAttribute("listtravel", travelService.findAllTravel());
 		model.addAttribute("listHomeByHomeId", homeService.findHomeByHomeId(homeId));
 		return "EditHome";
+
+	}
+	
+	@RequestMapping(value = "/sreachHome", method = RequestMethod.GET)
+	public String sreachHome(@RequestParam("travelId") int travelId, @RequestParam("homeId") int homeId, Model model) {
+
+		homeService.findHomeByTravelIdTravelId(travelId);
+		model.addAttribute("listtravel", travelService.findAllTravel());
+		model.addAttribute("listHomeByHomeId", homeService.findHomeByHomeId(homeId));
+		model.addAttribute("findHomeByTravelIdTravelId", travelService.findAllTravel());
+		return "viewHome";
 
 	}
 
