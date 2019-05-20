@@ -53,9 +53,9 @@ public class HomeServiceImpl  implements HomeService{
 
 
 	@Override
-	public Home findHomeByTravelIdTravelId(int travelId) {
+	public Home findHomeByTravelIdTitle(String Title) {
 		// TODO Auto-generated method stub
-		return homeRepository.findHomeByTravelIdTravelId(travelId);
+		return homeRepository.findHomeByTravelIdTitle(Title);
 	}
 
 

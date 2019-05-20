@@ -9,7 +9,7 @@ import edu.fa.model.Home;
 public interface HomeRepository extends JpaRepository<Home, Integer> {
 	public Home findHomeByHomeId(int HomeId);
 	
-	public Home findHomeByTravelIdTravelId(int travelId);
+	public Home findHomeByTravelIdTitle(String Title);
 	
 
 	

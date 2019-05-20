@@ -73,14 +73,20 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/sreachHome", method = RequestMethod.GET)
-	public String sreachHome(@RequestParam("travelId") int travelId, @RequestParam("homeId") int homeId, Model model) {
+	public String sreachHome(@RequestParam("travelId") String travelId, Model model) {
 
-		homeService.findHomeByTravelIdTravelId(travelId);
-		model.addAttribute("listtravel", travelService.findAllTravel());
-		model.addAttribute("listHomeByHomeId", homeService.findHomeByHomeId(homeId));
+		model.addAttribute("listHome", homeService.findAllHome());
+		model.addAttribute("listTravel", travelService.findAllTravel());
+		model.addAttribute("listPlanes", planesService.findAllPlanes());
 		model.addAttribute("findHomeByTravelIdTravelId", travelService.findAllTravel());
-		return "viewHome";
+		model.addAttribute("findHomeByTravelIdTitle" , homeService.findHomeByTravelIdTitle(travelId));
+		return "indexSreach";
 
 	}
+	
+
+	
+	
+	
 
 }

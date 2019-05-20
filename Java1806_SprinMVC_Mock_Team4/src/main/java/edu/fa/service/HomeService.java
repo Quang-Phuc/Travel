@@ -15,6 +15,6 @@ public interface HomeService {
 	
 	public Home findHomeByHomeId(int HomeId);
 	
-	public Home findHomeByTravelIdTravelId(int travelId);
+	public Home findHomeByTravelIdTitle(String Title);
 
 }

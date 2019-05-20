@@ -5,17 +5,17 @@
 <jsp:include page="header.jsp" />
 <!-- KRAJ jqueryslidemenu  -->
 <div id="content">
-   <c:forEach items="${listHome}" var="listHome">
+   <c:forEach items="${findHomeByTravelIdTitle}" var="findHomeByTravelIdTitle">
       <div class="kolona_lijevo">
          <h2>
             <a href="Detail?homeId=
-            <c:out value="${listHome.homeId }"></c:out>
+            <c:out value="${findHomeByTravelIdTitle.homeId }"></c:out>
             ">
-            <c:out value="${listHome.homeTitle }"></c:out>
+            <c:out value="${findHomeByTravelIdTitle.homeTitle }"></c:out>
             </a> 
          </h2>
          <p hidden id="myParagraph" >
-            <c:out value="${listHome.imageHome }"></c:out>
+            <c:out value="${findHomeByTravelIdTitle.imageHome }"></c:out>
          </p>
          <p >
             <script>
@@ -27,7 +27,7 @@
             </script>
          </p>
          <p>
-            <c:out value="${listHome.homeShortContents }"></c:out>
+            <c:out value="${findHomeByTravelIdTitle.homeShortContents }"></c:out>
          </p>
          <p>&nbsp;</p>
          <div class="clear"></div>
