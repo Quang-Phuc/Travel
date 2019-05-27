@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,60 +20,49 @@ public class Travel {
 	@Column(length = 4000)
 	private String title;
 
-	@OneToMany
+	@OneToMany(fetch = FetchType.LAZY)
 	@JoinColumn(name = "travelId")
 	private List<TravelContent> travelContents = new ArrayList<>();
-	
-	
-	@OneToMany
+
+	@OneToMany(fetch = FetchType.LAZY)
 	@JoinColumn(name = "homeId")
 	private List<Home> home = new ArrayList<>();
-
 
 	public int getTravelId() {
 		return travelId;
 	}
 
-
 	public void setTravelId(int travelId) {
 		this.travelId = travelId;
 	}
-
 
 	public String getTitle() {
 		return title;
 	}
 
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 
 	public List<TravelContent> getTravelContents() {
 		return travelContents;
 	}
 
-
 	public void setTravelContents(List<TravelContent> travelContents) {
 		this.travelContents = travelContents;
 	}
-
 
 	public List<Home> getHome() {
 		return home;
 	}
 
-
 	public void setHome(List<Home> home) {
 		this.home = home;
 	}
 
-
 	public Travel() {
 		super();
 	}
-
 
 	@Override
 	public String toString() {
@@ -80,5 +70,4 @@ public class Travel {
 				+ home + "]";
 	}
 
-	
 }

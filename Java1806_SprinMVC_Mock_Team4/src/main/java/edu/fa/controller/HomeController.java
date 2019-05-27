@@ -34,10 +34,10 @@ public class HomeController {
 	@RequestMapping(value = "/saveHome", method = RequestMethod.GET)
 	public String saveHomeGET(Model model) {
 		model.addAttribute("listtravel", travelService.findAllTravel());
-		return  PageAction.HomePage.SAVE_HOME;
+		return PageAction.HomePage.SAVE_HOME;
 
 	}
-	
+
 	@RequestMapping(value = "/saveHome", method = RequestMethod.POST)
 	public String saveHome(Home home, Model model) {
 		homeService.save(home);
@@ -52,7 +52,7 @@ public class HomeController {
 		return "viewHome";
 
 	}
-	
+
 	@RequestMapping(value = "/deleteHome", method = RequestMethod.GET)
 	public String deleteHome(@RequestParam("homeId") int homeId, Model model) {
 
@@ -61,7 +61,7 @@ public class HomeController {
 		return "viewHome";
 
 	}
-	
+
 	@RequestMapping(value = "/updateHome", method = RequestMethod.GET)
 	public String updateHome(@RequestParam("homeId") int homeId, Model model) {
 
@@ -71,22 +71,20 @@ public class HomeController {
 		return "EditHome";
 
 	}
-	
+
 	@RequestMapping(value = "/sreachHome", method = RequestMethod.GET)
-	public String sreachHome(@RequestParam("travelId") String travelId, Model model) {
+	public String sreachHome(@RequestParam("traveltitle") String traveltitle, Model model,
+			@RequestParam("travelId") int travelId) {
 
 		model.addAttribute("listHome", homeService.findAllHome());
 		model.addAttribute("listTravel", travelService.findAllTravel());
 		model.addAttribute("listPlanes", planesService.findAllPlanes());
 		model.addAttribute("findHomeByTravelIdTravelId", travelService.findAllTravel());
-		model.addAttribute("findHomeByTravelIdTitle" , homeService.findHomeByTravelIdTitle(travelId));
+		model.addAttribute("findHomeByTravelIdTitle", homeService.findHomeByTravelIdTitle(traveltitle));
+		model.addAttribute("findTravelBytravelId", travelService.findTravelBytravelId(travelId));
+
 		return "indexSreach";
 
 	}
-	
-
-	
-	
-	
 
 }

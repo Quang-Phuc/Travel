@@ -120,7 +120,7 @@
     
     
    <div class="s003">
-      <form action="sreachHome?travelId" method="get">
+      <form action="sreachHome?traveltitle" method="get">
         <div class="inner-form">
             <div class="input-field first-wrap">
                <div class="input-select">
