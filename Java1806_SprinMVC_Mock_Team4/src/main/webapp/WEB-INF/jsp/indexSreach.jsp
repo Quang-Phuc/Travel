@@ -5,16 +5,16 @@
 <jsp:include page="header.jsp" />
 <!-- KRAJ jqueryslidemenu  -->
 <div id="content">
-   <c:forEach items="${findTravelBytravelId}" var="findTravelBytravelId">
-  <%--     <div class="kolona_lijevo">
+   <c:forEach items="${findTravelByTitle}" var="findTravelByTitle">
+       <div class="kolona_lijevo">
          <h2>
             <a href="Detail?homeId=
-            <c:out value="${findHomeByTravelIdTitle.homeId }"></c:out>
+            <c:out value="${findTravelByTitle.home.homeId }"></c:out>
             ">
-            <c:out value="${findHomeByTravelIdTitle.homeTitle }"></c:out>
+            <c:out value="${findTravelByTitle.travelId.homeTitle }"></c:out>
             </a> 
          <p hidden id="myParagraph" >
-            <c:out value="${findHomeByTravelIdTitle.imageHome }"></c:out>
+            <c:out value="${findTravelByTitle.travelId.imageHome }"></c:out>
          </p>
          <p >
             <script>
@@ -26,11 +26,11 @@
             </script>
          </p>
          <p>
-            <c:out value="${findHomeByTravelIdTitle.homeShortContents }"></c:out>
+            <c:out value="${findTravelByTitle.travelId.homeShortContents }"></c:out>
          </p>
          <p>&nbsp;</p>
          <div class="clear"></div>
-      </div> --%>
+      </div> 
      <%--  ${findHomeByTravelIdTitle.title} --%>
    </c:forEach>
    <div class="clear"></div>

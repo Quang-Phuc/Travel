@@ -5,24 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.fa.model.Home;
 import edu.fa.model.Travel;
 import edu.fa.repository.TravelRepository;
 import edu.fa.service.TravelService;
+
 @Service
-public class TravelServiceImpl  implements TravelService{
+public class TravelServiceImpl implements TravelService {
 
 	@Autowired
 	private TravelRepository travelRepository;
+
 	@Override
 	public List<Travel> findAllTravel() {
-		
+
 		return travelRepository.findAll();
 	}
 
 	@Override
 	public Travel save(Travel travel) {
-	
+
 		return travelRepository.save(travel);
 	}
 
@@ -35,7 +36,7 @@ public class TravelServiceImpl  implements TravelService{
 	@Override
 	public void deleteTravelBytravelId(int travelId) {
 		travelRepository.delete(travelId);
-		
+
 	}
 
 	@Override
@@ -44,12 +45,10 @@ public class TravelServiceImpl  implements TravelService{
 		return travelRepository.findTravelByTravelId(travelId);
 	}
 
-	
+	@Override
+	public List<Travel> findTravelByTitle(String title) {
+		// TODO Auto-generated method stub
+		return travelRepository.findTravelByTitle(title);
+	}
 
-
-	
-
-	
-	
-	
 }

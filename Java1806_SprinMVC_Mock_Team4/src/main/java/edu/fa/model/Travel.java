@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,11 +19,11 @@ public class Travel {
 	@Column(length = 4000)
 	private String title;
 
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany /* (fetch = FetchType.LAZY) */
 	@JoinColumn(name = "travelId")
 	private List<TravelContent> travelContents = new ArrayList<>();
 
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany /* (fetch = FetchType.LAZY) */
 	@JoinColumn(name = "homeId")
 	private List<Home> home = new ArrayList<>();
 

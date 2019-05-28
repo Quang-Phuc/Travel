@@ -16,4 +16,6 @@ public interface TravelService {
 
 	public Travel findTravelBytravelId(int travelId);
 
+	List<Travel> findTravelByTitle(String title);
+
 }

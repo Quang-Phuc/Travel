@@ -2,7 +2,6 @@ package edu.fa.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,7 +20,7 @@ public class Home {
 	private String homeShortContents;
 	@Column(length = 4000)
 	private String homeContents;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne /* (fetch = FetchType.LAZY) */
 	@JoinColumn(name = "travelId")
 	private Travel travelId;
 	private int point;
