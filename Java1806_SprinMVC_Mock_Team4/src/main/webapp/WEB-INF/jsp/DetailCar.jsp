@@ -106,7 +106,7 @@
         <!-- end sivo_block3 -->
       
       <!-- end sivo_block  -->
-      
+      <input type="submit" value="Đặt xe" ></input>
         <!-- end items-wrapper -->
         <div class="clear"></div>
       </div>

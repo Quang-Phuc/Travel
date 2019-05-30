@@ -12,9 +12,9 @@ public interface HomeService {
 	Home update(Home home);
 
 	public void deleteHomeByHomeId(int travelId);
-	
+
 	public Home findHomeByHomeId(int HomeId);
-	
-	public Home findHomeByTravelIdTitle(String Title);
+
+	public List<Home> findHomeByTravelIdTitle(String Title);
 
 }
