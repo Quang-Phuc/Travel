@@ -19,7 +19,7 @@ public class CarController {
 
 	@RequestMapping(value = "/saveCar", method = RequestMethod.GET)
 	public String saveByCar(Model model) {
-		
+
 		return "saveCar";
 	}
 
@@ -32,13 +32,13 @@ public class CarController {
 	}
 
 	@RequestMapping(value = "/viewCar", method = RequestMethod.GET)
-	public String viewCar( Model model) {
+	public String viewCar(Model model) {
 
 		model.addAttribute("listCar", carService.findAllCar());
 		return "viewCar";
 
 	}
-	
+
 	@RequestMapping(value = "/deleteCar", method = RequestMethod.GET)
 	public String deleteCar(@RequestParam("carId") int carId, Model model) {
 
@@ -47,7 +47,7 @@ public class CarController {
 		return "viewCar";
 
 	}
-	
+
 	@RequestMapping(value = "/updateCar", method = RequestMethod.GET)
 	public String updateCar(@RequestParam("carId") int carId, Model model) {
 
@@ -56,7 +56,5 @@ public class CarController {
 		return "EditCar";
 
 	}
-	
-	
 
 }
