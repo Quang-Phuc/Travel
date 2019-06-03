@@ -7,6 +7,6 @@ import edu.fa.model.bookCar;
 
 @Repository
 public interface BookCarRepository extends JpaRepository<bookCar, Integer> {
-	public bookCar findbookCarByCarId(int bookcarId);
+	public bookCar findBookCarByBookCarId(int bookcarId);
 
 }

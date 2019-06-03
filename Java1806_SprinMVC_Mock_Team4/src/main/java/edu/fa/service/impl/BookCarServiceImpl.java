@@ -42,7 +42,7 @@ public class BookCarServiceImpl implements BookCarService {
 	@Override
 	public bookCar findBookCarByCarId(int bookcarId) {
 		// TODO Auto-generated method stub
-		return bookCarRepository.findbookCarByCarId(bookcarId);
+		return bookCarRepository.findBookCarByBookCarId(bookcarId);
 	}
 
 }

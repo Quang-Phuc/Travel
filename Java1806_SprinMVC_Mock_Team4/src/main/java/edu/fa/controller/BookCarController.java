@@ -14,12 +14,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import edu.fa.common.PageAction;
-import edu.fa.model.Car;
+import edu.fa.model.bookCar;
+import edu.fa.service.BookCarService;
 import edu.fa.service.CarService;
 
 @Controller
 
 public class BookCarController {
+	@Autowired
+	private BookCarService bookCarService;
 	@Autowired
 	private CarService carService;
 
@@ -31,9 +34,9 @@ public class BookCarController {
 	}
 
 	@RequestMapping(value = "/savebookCar", method = RequestMethod.POST)
-	public String savesavebookCar(Car car, Model model) {
-		carService.save(car);
-		model.addAttribute("listCar", carService.findAllCar());
+	public String savesavebookCar(bookCar bookCar, Model model) {
+		bookCarService.save(bookCar);
+
 		return "redirect:" + PageAction.CarPage.VIEWCAR;
 
 	}

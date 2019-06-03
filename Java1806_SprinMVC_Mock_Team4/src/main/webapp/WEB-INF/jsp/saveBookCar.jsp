@@ -140,7 +140,7 @@
 
 			<!-- Main content -->
 			<form action="savebookCar" method="post">
-			<input type="hidden" name="carId" value="<c:out value="${carBycarId.carId}"></c:out>" /> 
+			<input type="hidden" name="car.carId" value="<c:out value="${carBycarId.carId}"></c:out>" /> 
 				<section class="content">
 					<div class="row">
 
