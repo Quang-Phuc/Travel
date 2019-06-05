@@ -41,6 +41,13 @@ public class BookCarController {
 
 	}
 
+	@RequestMapping(value = "/viewBookCar", method = RequestMethod.GET)
+	public String viewBookCar(bookCar bookCar, Model model) {
+
+		return PageAction.BookCarPage.VIEWBOOKCAR;
+
+	}
+
 	@InitBinder
 	private void dataBinder(WebDataBinder binder) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
