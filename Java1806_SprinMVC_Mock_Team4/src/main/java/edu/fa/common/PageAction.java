@@ -54,6 +54,7 @@ public class PageAction {
 		public static final String VIEWBOOKCAR = "viewBookCar";
 		public static final String SAVECAR = "saveCar";
 		public static final String EDITCAR = "EditCar";
+		public static final String VIEWBOOKCARADMIN = "viewBookCarAdmin";
 
 	}
 

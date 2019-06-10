@@ -41,10 +41,11 @@ public class BookCarController {
 
 	}
 
-	@RequestMapping(value = "/viewBookCar", method = RequestMethod.GET)
-	public String viewBookCar(bookCar bookCar, Model model) {
+	@RequestMapping(value = "/viewBookCarAdmin", method = RequestMethod.GET)
+	public String ViewBookCarAdmin(bookCar bookCar, Model model) {
 
-		return PageAction.BookCarPage.VIEWBOOKCAR;
+		model.addAttribute("findAllBookCars", bookCarService.findAllBookCars());
+		return PageAction.BookCarPage.VIEWBOOKCARADMIN;
 
 	}
 

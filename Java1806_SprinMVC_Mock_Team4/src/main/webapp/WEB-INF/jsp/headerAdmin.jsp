@@ -186,7 +186,7 @@
 							<span>Quản lý</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="viewBookCar"><i class="fa fa-circle-o"></i>
+							<li><a href="viewBookCarAdmin"><i class="fa fa-circle-o"></i>
 									Quản lý đặt xe</a></li>
 							<li><a href="viewUser"><i class="fa fa-circle-o"></i>
 									Danh sách người dùng <i class="fa fa-angle-left pull-right"></i></a>

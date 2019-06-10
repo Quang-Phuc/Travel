@@ -57,4 +57,12 @@ public class CarController {
 
 	}
 
+	@RequestMapping(value = "/viewBookCar", method = RequestMethod.GET)
+	public String viewBookCar(@RequestParam("carId") int carId, Model model) {
+
+		model.addAttribute("listCar", carService.findAllCar());
+		return "viewBookCar";
+
+	}
+
 }
