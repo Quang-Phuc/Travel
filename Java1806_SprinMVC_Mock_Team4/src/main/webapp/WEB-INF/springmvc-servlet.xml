@@ -16,6 +16,7 @@
 	
 	<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
 	<mvc:resources location="/css2/" mapping="/css2/**"></mvc:resources>
+	<mvc:resources location="/treecss/" mapping="/treecss/**"></mvc:resources>
 	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
 	
 	<mvc:resources location="/js2/" mapping="/js2/**"></mvc:resources>
