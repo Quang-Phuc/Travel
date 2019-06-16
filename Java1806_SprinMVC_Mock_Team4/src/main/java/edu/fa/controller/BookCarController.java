@@ -44,6 +44,7 @@ public class BookCarController {
 	@RequestMapping(value = "/viewBookCarAdmin", method = RequestMethod.GET)
 	public String ViewBookCarAdmin(bookCar bookCar, Model model) {
 
+		model.addAttribute("findAllCar", carService.findAllCar());
 		model.addAttribute("findAllBookCars", bookCarService.findAllBookCars());
 		return PageAction.BookCarPage.VIEWBOOKCARADMIN;
 
