@@ -15,4 +15,6 @@ public interface BookCarService {
 
 	public bookCar findBookCarByCarId(int bookcarId);
 
+	List<bookCar> findBookCarByCarCarTitle(String carTitle);
+
 }

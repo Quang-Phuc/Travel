@@ -65,15 +65,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                    <c:forEach items="${findAllBookCars}" var="findAllBookCars">
+                    <c:forEach items="${findAllBookCarsByTitle}" var="findAllBookCarsByTitle">
                       <tr>
-                      <td><c:out value="${findAllBookCars.name}"></c:out></td>
-                        <td><c:out value="${findAllBookCars.personNumber }"></c:out></td>
-                        <td><c:out value="${findAllBookCars.timeGo }"></c:out></td>
-                        <td><c:out value="${findAllBookCars.place }"></c:out></td>
-                        <td> <c:out value="${findAllBookCars.phoneNumber }"></c:out></td>
-                        <td> <a href="deleteBookCar?bookCarId=<c:out value="${findAllBookCars.bookCarId }"></c:out>">Xoa</a> 
-                        	 <a href="updateBookCar?findAllBookCars=<c:out value="${findAllBookCars.bookCarId }"></c:out>">Sua</a> 
+                      <td><c:out value="${findAllBookCarsByTitle.name}"></c:out></td>
+                        <td><c:out value="${findAllBookCarsByTitle.personNumber }"></c:out></td>
+                        <td><c:out value="${findAllBookCarsByTitle.timeGo }"></c:out></td>
+                        <td><c:out value="${findAllBookCarsByTitle.place }"></c:out></td>
+                        <td> <c:out value="${findAllBookCarsByTitle.phoneNumber }"></c:out></td>
+                        <td> <a href="deleteBookCar?bookCarId=<c:out value="${findAllBookCarsByTitle.bookCarId }"></c:out>">Xoa</a> 
+                        	 <a href="updateBookCar?findAllBookCars=<c:out value="${findAllBookCarsByTitle.bookCarId }"></c:out>">Sua</a> 
                         </td>
                         
                       </tr>

@@ -50,6 +50,21 @@ public class BookCarController {
 
 	}
 
+	@RequestMapping(value = "/deleteBookCar", method = RequestMethod.GET)
+	public String deleteBookCar(bookCar bookCar, @RequestParam("bookCarId") int bookCarId) {
+		bookCarService.deleteByBookCarId(bookCarId);
+		return PageAction.BookCarPage.VIEWBOOKCARADMIN;
+	}
+
+	@RequestMapping(value = "/sreachBookCar", method = RequestMethod.GET)
+	public String sreachHome(@RequestParam("carTitle") String carTitle, Model model) {
+		model.addAttribute("findAllCar", carService.findAllCar());
+		model.addAttribute("findAllBookCars", bookCarService.findAllBookCars());
+		model.addAttribute("findAllBookCarsByTitle", bookCarService.findBookCarByCarCarTitle(carTitle));
+		return "viewBookCarAdminSreach";
+
+	}
+
 	@InitBinder
 	private void dataBinder(WebDataBinder binder) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
