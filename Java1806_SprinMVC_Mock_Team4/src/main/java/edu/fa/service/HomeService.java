@@ -17,4 +17,6 @@ public interface HomeService {
 
 	public List<Home> findHomeByTravelIdTitle(String Title);
 
+	public List<Home> findHomeTop9ByTravelIdTitle(String Title);
+
 }

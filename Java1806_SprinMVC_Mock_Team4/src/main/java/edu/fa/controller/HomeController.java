@@ -81,6 +81,7 @@ public class HomeController {
 		model.addAttribute("findHomeByTravelIdTravelId", travelService.findAllTravel());
 		model.addAttribute("findHomeByTravelIdTitle", homeService.findHomeByTravelIdTitle(traveltitle));
 		model.addAttribute("findTravelByTitle", travelService.findTravelByTitle(traveltitle));
+		model.addAttribute("top9", homeService.findHomeTop9ByTravelIdTitle(traveltitle));
 
 		return "indexSreach";
 

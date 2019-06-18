@@ -16,32 +16,33 @@ public class IndexController {
 
 	@Autowired
 	private SaleService saleService;
-	
+
 	@Autowired
 	private HomeService homeService;
 	@Autowired
 	private TravelService travelService;
-	
+
 	@Autowired
 	private CarService carService;
 
 	@RequestMapping(value = "/sale", method = RequestMethod.GET)
 	public String showSale(Model model) {
-		
+
 		model.addAttribute("listSale", saleService.findAllSale());
 		return "Sale";
 	}
-	
+
 	@RequestMapping(value = "index", method = RequestMethod.GET)
 	public String showLoginOne(Model model) {
 		model.addAttribute("listHome", homeService.findAllHome());
 		model.addAttribute("listTravel", travelService.findAllTravel());
+
 		return "index";
 	}
-	
+
 	@RequestMapping(value = "/car", method = RequestMethod.GET)
 	public String showCar(Model model) {
-		
+
 		model.addAttribute("listCar", carService.findAllCar());
 		return "Car";
 	}
